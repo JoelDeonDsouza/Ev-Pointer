@@ -1,14 +1,36 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaProvider } from "react-native";
 // redux //
 import { Provider } from "react-redux";
-import InitialScreen from "./Screens/InitialScreen";
 import { store } from "./store";
+// Navigation //
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// Screens //
+import InitialScreen from "./Screens/InitialScreen";
+import MapScreen from "./Screens/MapScreen";
+
+// stack navigation //
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <Provider store={store}>
-      <InitialScreen />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="InitialScreen"
+            component={InitialScreen}
+          />
+          {/* map */}
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="MapScreen"
+            component={MapScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 }
