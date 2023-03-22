@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // Screens //
 import InitialScreen from "./Screens/InitialScreen";
 import MapScreen from "./Screens/MapScreen";
+import Map from "./Screens/Map";
 
 // stack navigation //
 const Stack = createNativeStackNavigator();
@@ -28,6 +29,11 @@ export default function App() {
             options={{ headerShown: false }}
             name="MapScreen"
             component={MapScreen}
+          />
+            <Stack.Screen
+            options={{ headerShown: false }}
+            name="Map"
+            component={Map}
           />
         </Stack.Navigator>
       </NavigationContainer>

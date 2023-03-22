@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View,  Image } from "react-native";
 import tw from "tailwind-react-native-classnames";
 // map view //
 import MapView, {Marker} from 'react-native-maps';

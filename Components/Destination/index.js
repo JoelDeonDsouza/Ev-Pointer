@@ -6,39 +6,40 @@ import {
   SafeAreaView,
   TextInput,
   Pressable,
-  Image
+  Image,
 } from "react-native";
-import tw from "tailwind-react-native-classnames";
 
-const Destination = ({navigation}) => {
+const Destination = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-    <View style={styles.logoUserContainer}>
-          <Image
-            source={{
-              uri: "https://avatars.githubusercontent.com/u/116739729?s=200&v=4",
-            }}
-            style={styles.logo}
-          />
-          <Image
-            source={{
-              uri: "https://cdn-icons-png.flaticon.com/512/9849/9849449.png",
-            }}
-            style={styles.user}
-          />
-        </View>
-        <Text style={styles.welcomeText}>
-        Welcome to BlitzCharge
-      </Text>
-      {/* <Text style={tw`text-center py-5 text-lg text-white`}>
-        Locate nearest charging stations
-      </Text> */}
+      <View style={styles.logoUserContainer}>
+        <Image
+          source={{
+            uri: "https://avatars.githubusercontent.com/u/116739729?s=200&v=4",
+          }}
+          style={styles.logo}
+        />
+        <Image
+          source={{
+            uri: "https://cdn-icons-png.flaticon.com/512/9849/9849449.png",
+          }}
+          style={styles.user}
+        />
+      </View>
+      <Text style={styles.welcomeText}>Welcome to BlitzCharge</Text>
       <View>
-        <TextInput  style={styles.input}   placeholder= "Enter location to locate nearest charging stations"    placeholderTextColor="#eee"  />
+        <TextInput
+          style={styles.input}
+          placeholder="Enter location to locate nearest charging stations"
+          placeholderTextColor="#eee"
+        />
       </View>
       <View style={styles.btnContainer}>
-        <Pressable style={styles.button} onPress={() => navigation.navigate('NavigationOptions')}>
-            <Text style={styles.text}>Search</Text>
+        <Pressable
+          style={styles.button}
+          onPress={() => navigation.navigate("NavigationOptions")}
+        >
+          <Text style={styles.text}>Search</Text>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -62,29 +63,28 @@ const styles = StyleSheet.create({
     borderColor: "white",
     color: "white",
     borderRadius: 25,
-   
   },
-  btnContainer:{
+  btnContainer: {
     display: "flex",
     alignItems: "center",
     padding: 25,
   },
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#eee',
+    backgroundColor: "#eee",
     width: 200,
   },
   text: {
     fontSize: 18,
     lineHeight: 21,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     letterSpacing: 0.25,
-    color: '#000',
+    color: "#000",
   },
   logoUserContainer: {
     display: "flex",
@@ -106,14 +106,14 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     marginRight: 10,
   },
-  welcomeText:{
+  welcomeText: {
     color: "white",
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    alignSelf:"center",
+    alignSelf: "center",
     fontSize: 20,
     fontWeight: "bold",
     letterSpacing: 0.25,
-  }
+  },
 });
