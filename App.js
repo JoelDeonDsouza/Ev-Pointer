@@ -18,11 +18,11 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen
+          {/* <Stack.Screen
             options={{ headerShown: false }}
             name="InitialScreen"
             component={InitialScreen}
-          />
+          /> */}
           {/* map */}
           <Stack.Screen
             options={{ headerShown: false }}

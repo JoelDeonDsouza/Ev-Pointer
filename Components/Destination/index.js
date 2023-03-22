@@ -5,21 +5,36 @@ import {
   View,
   SafeAreaView,
   TextInput,
-  Pressable
+  Pressable,
+  Image
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 
 const Destination = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={tw`text-center py-5 text-xl text-white`}>
-        Locate nearest charging stations
+    <View style={styles.logoUserContainer}>
+          <Image
+            source={{
+              uri: "https://avatars.githubusercontent.com/u/116739729?s=200&v=4",
+            }}
+            style={styles.logo}
+          />
+          <Image
+            source={{
+              uri: "https://cdn-icons-png.flaticon.com/512/9849/9849449.png",
+            }}
+            style={styles.user}
+          />
+        </View>
+        <Text style={styles.welcomeText}>
+        Welcome to BlitzCharge
       </Text>
+      {/* <Text style={tw`text-center py-5 text-lg text-white`}>
+        Locate nearest charging stations
+      </Text> */}
       <View>
-        <TextInput  style={styles.input}   placeholder= "Enter location"    placeholderTextColor="#eee"  />
-      </View>
-      <View>
-        <TextInput  style={styles.input}   placeholder= "Enter destination"    placeholderTextColor="#eee"  />
+        <TextInput  style={styles.input}   placeholder= "Enter location to locate nearest charging stations"    placeholderTextColor="#eee"  />
       </View>
       <View style={styles.btnContainer}>
         <Pressable style={styles.button} onPress={() => navigation.navigate('NavigationOptions')}>
@@ -36,6 +51,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#000000",
     flex: 1,
+    borderTopLeftRadius: 18,
+    borderTopRightRadius: 18,
   },
   input: {
     height: 40,
@@ -69,4 +86,34 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: '#000',
   },
+  logoUserContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  logo: {
+    width: 60,
+    height: 60,
+    resizeMode: "contain",
+    marginBottom: 30,
+  },
+  user: {
+    width: 25,
+    height: 25,
+    resizeMode: "contain",
+    marginBottom: 30,
+    marginRight: 10,
+  },
+  welcomeText:{
+    color: "white",
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    alignSelf:"center",
+    fontSize: 20,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+  }
 });
