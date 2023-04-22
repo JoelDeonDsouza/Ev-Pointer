@@ -4,7 +4,6 @@ App solution to close the infrastructural and technological gaps in terms of man
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/TRf638F/Whats-App-Image-2023-03-22-at-4-03-39-PM.jpg)
 ![App Screenshot](https://i.ibb.co/MRdTGqV/Whats-App-Image-2023-03-22-at-4-03-39-PM-1.jpg)
 ![App Screenshot](https://i.ibb.co/T4n8zLd/Whats-App-Image-2023-03-22-at-4-03-39-PM-2.jpg)
 
