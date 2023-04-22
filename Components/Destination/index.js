@@ -20,9 +20,6 @@ const Destination = ({ navigation }) => {
           style={styles.logo}
         />
         <Image
-          source={{
-            uri: "https://cdn-icons-png.flaticon.com/512/9849/9849449.png",
-          }}
           style={styles.user}
         />
       </View>
